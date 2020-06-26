@@ -17,7 +17,7 @@ class MnistMetrics:
 
         self.vae = vae
 
-        self.df = pd.DataFrame(L)
+        self.df = pd.DataFrame(self.L)
         self.df["label"] = y_test
         self.df = self.df.set_index("label").sort_index()
         self.df.columns = ["label_" + str(i) for i in self.df.columns]
